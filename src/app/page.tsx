@@ -1,8 +1,15 @@
+import HoursFormat from '@/components/HourFormat';
+import Locations from '@/components/Locations';
+
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-      <div className='z-10 w-full max-w-5xl items-center justify-between text-center font-mono text-sm lg:flex'>
-        Nextjs + Tailwind CSS + TypeScript Starter by Hayden Ngo
+    <main className='relative z-10 mx-auto w-[1013px]'>
+      <div className='relative z-[50000] flex justify-between pt-8'>
+        <h1 className='text-lg'>WorldTimeBuddy</h1>
+        <HoursFormat />
+      </div>
+      <div className='relative'>
+        <Locations />
       </div>
     </main>
   );
