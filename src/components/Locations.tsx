@@ -1,4 +1,4 @@
-import LocationDateTime from './LocationDateTime';
+import LocationTimezones from './LocationTimezones';
 import Toolbar from './Toolbar/Toolbar';
 
 const Locations = () => {
@@ -6,7 +6,7 @@ const Locations = () => {
     <div className='relative'>
       <div className='mb-[45px] mt-[30px] rounded-[3px] border border-solid border-[#ccc] bg-white p-px shadow-[0_20px_50px_-20px_rgba(0,0,0,0.3)]'>
         <Toolbar />
-        <LocationDateTime />
+        <LocationTimezones />
       </div>
     </div>
   );
