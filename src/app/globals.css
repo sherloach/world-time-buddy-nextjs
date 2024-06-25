@@ -10,3 +10,13 @@ body {
   margin: 0;
   background: #e8e6e3 url('image 100x100.png');
 }
+
+@layer utilities {
+  .bg-pos-close {
+    background-position: -22px -76px !important;
+  }
+
+  .bg-pos-home {
+    background-position: -22px -101px !important;
+  }
+}

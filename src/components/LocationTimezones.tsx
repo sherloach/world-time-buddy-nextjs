@@ -1,7 +1,9 @@
 'use client';
 
-import { DragDropContext, Draggable, Droppable } from '@hello-pangea/dnd';
+import { DragDropContext, Droppable } from '@hello-pangea/dnd';
 import { useState } from 'react';
+
+import Timezone from './Timezone';
 
 interface Item {
   id: number;
@@ -50,21 +52,7 @@ const LocationTimezones = () => {
         {(provided) => (
           <ol {...provided.droppableProps} ref={provided.innerRef} className=''>
             {items.map((list, index) => (
-              <Draggable
-                key={index}
-                draggableId={index.toString()}
-                index={index}
-              >
-                {(provided) => (
-                  <div
-                    ref={provided.innerRef}
-                    {...provided.draggableProps}
-                    {...provided.dragHandleProps}
-                  >
-                    {list.content}
-                  </div>
-                )}
-              </Draggable>
+              <Timezone key={list.id} data={list} index={index} />
             ))}
             {provided.placeholder}
           </ol>
